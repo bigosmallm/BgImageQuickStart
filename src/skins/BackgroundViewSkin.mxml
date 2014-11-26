@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
-        xmlns:s="library://ns.adobe.com/flex/spark">
+        xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fxg="assets.fxg.*" xmlns:assets="assets.*">
 	<fx:Metadata>
 		[HostComponent("spark.components.View")]
 	</fx:Metadata>
+	<fx:Script>
+		<![CDATA[
+			import assets.logo_om_low_color;
+		]]>
+	</fx:Script>
 
 	<!-- states -->
 	<s:states>
@@ -11,12 +16,8 @@
 		<s:State name="normal"/>
 	</s:states>
 
-	<!--s:Image id="bgLogo" source="@Embed('../../../../assets/logo_om_low_color.svg')" width="100%" y="100"/-->
-	<s:Rect id="backgroundRect" left="0" right="0" top="0" bottom="0"  >
-		<s:fill>
-			<s:BitmapFill source="@Embed('../assets/logo_om_low_color.svg')" fillMode="scale"/>
-		</s:fill>
-	</s:Rect>
 
+	<assets:logo_om_low_color scaleX="2" scaleY="2" />
+	
 	<s:Group id="contentGroup" width="100%" height="100%" minWidth="0" minHeight="0"/>
 </s:Skin>
